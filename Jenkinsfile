@@ -2,22 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
+
+        stage('Deploy Website') {
             steps {
-                echo 'Cloning repository...'
+                sh '''
+                sudo rm -rf /var/www/html/*
+                sudo cp -r * /var/www/html/
+                '''
             }
         }
 
-        stage('Build') {
-            steps {
-                echo 'Building website...'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying website...'
-            }
-        }
     }
 }
