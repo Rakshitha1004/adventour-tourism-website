@@ -51,11 +51,27 @@ nav {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
-nav .logo {
+nav .brand {
   display: flex;
-  width: 60px;
-  margin: 2vh;
+  align-items: center;
+  gap: 0.65rem;
   margin-left: 5%;
+  text-decoration: none;
+}
+
+nav .brand img,
+nav .logo {
+  width: 52px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+nav .site-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: rgb(5, 5, 5);
+  letter-spacing: 0.8px;
 }
 
 nav ul li {
